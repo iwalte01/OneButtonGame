@@ -48,6 +48,8 @@ public class Player1 : MonoBehaviour
             if (hit && hit.collider.gameObject.tag == "Box")
             {
                 Debug.Log("hit the box");
+                hit.collider.GetComponent<Box>().Explode();
+                
                 //letter fall
                 //hit.collider.gameObject.GetComponent<Letter>().LetterFall();
             }
