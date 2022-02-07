@@ -16,31 +16,19 @@ public class Letters : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        frameTimer = 1;
-        initpos = gameObject.transform.position;
+        rb.gravityScale = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        frameTimer -= Time.deltaTime;
-        if (frameTimer <= 0)
-        {
-            LetterFall();
-
-        }
+        
     }
-
-    public void LetterFall() {
-        rb.gravityScale = 1;
-    }
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.CompareTag("Floor")) {
             Debug.Log("Floor Hit");
             gameObject.transform.position = initpos;
-            rb.gravityScale = 0;
 
         }
         //if (collision.collider.gameObject.CompareTag("Cart"))

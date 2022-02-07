@@ -7,6 +7,7 @@ public class PlayerBoxHit : MonoBehaviour
     //IF player hits box then box disappears and then letter should fall
 
     private Rigidbody2D rb;
+    public GameObject letterPrefab;
 
     void Start()
     {
@@ -29,7 +30,10 @@ public class PlayerBoxHit : MonoBehaviour
             if(hit && hit.collider.gameObject.tag == "Box")
             {
                 //letter fall
+                Debug.Log("Hit");
+                Instantiate(letterPrefab, transform.position, Quaternion.identity);
                 //hit.collider.gameObject.GetComponent<Letter>().LetterFall();
+                Destroy(gameObject);
             }
         }
     }
