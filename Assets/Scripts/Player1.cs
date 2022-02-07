@@ -6,6 +6,10 @@ public class Player1 : MonoBehaviour
 {
     public float speed;
     public Sprite playerForward;
+    public Sprite cartN;
+    public Sprite cartE;
+    public Sprite cartT;
+    public Sprite cartO;
 
     private Rigidbody2D rb;
     private SpriteRenderer mySpriteRenderer;
@@ -47,6 +51,36 @@ public class Player1 : MonoBehaviour
                 //letter fall
                 //hit.collider.gameObject.GetComponent<Letter>().LetterFall();
             }
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        int letterCount = 0;
+
+        if(collision.collider.gameObject.tag == "N")
+        {
+            letterCount++;
+            mySpriteRenderer.sprite = cartN;
+        }
+        if(collision.collider.gameObject.tag == "E")
+        {
+            letterCount++;
+            mySpriteRenderer.sprite = cartE;
+        }
+        if(collision.collider.gameObject.tag == "T")
+        {
+            letterCount++;
+            mySpriteRenderer.sprite = cartT;
+        }
+        if(collision.collider.gameObject.tag == "O")
+        {
+            letterCount++;
+            mySpriteRenderer.sprite = cartO;
+        }
+        if(letterCount >= 5)
+        {
+            Debug.Log("Level Complete go to next stage");
         }
     }
 }
