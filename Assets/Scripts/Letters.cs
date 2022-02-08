@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Letters : MonoBehaviour
 {
@@ -14,9 +15,21 @@ public class Letters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        rb.gravityScale = 1;
+
+        if (sceneName == "NettoGame")
+        {
+            rb.gravityScale = 1;
+        }
+        else if (sceneName == "Endgame")
+        {
+            rb.gravityScale = 0;
+        }
+        
+        
     }
 
     // Update is called once per frame
