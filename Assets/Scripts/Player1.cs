@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player1 : MonoBehaviour
 {
@@ -31,17 +32,17 @@ public class Player1 : MonoBehaviour
         if(rb.velocity.x > 0)
         {
             mySpriteRenderer.flipX = false;
-            mySpriteRenderer.sprite = playerForward;
+            //mySpriteRenderer.sprite = playerForward;
         }
         if(rb.velocity.x < 0)
         {
-            mySpriteRenderer.sprite = playerForward;
+            //mySpriteRenderer.sprite = playerForward;
             mySpriteRenderer.flipX = true;
         }
 
         if (letterCount >= 5)
         {
-            Debug.Log("Level Complete go to next stage");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
