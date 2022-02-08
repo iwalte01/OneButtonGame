@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class nScript : MonoBehaviour
+public class oScript : MonoBehaviour
 {
-    //when mouse button is clicked it gets put into the right spot
-    public GameObject nPrefab;
+    // Start is called before the first frame update
+    public GameObject oPrefab;
+    int counter = 0;
 
-    int counter;
     void Start()
     {
         
@@ -18,23 +18,22 @@ public class nScript : MonoBehaviour
     {
         
     }
-
     private void OnMouseDown()
     {
         counter++;
-        if(counter == 1)
+        if (counter == 1)
         {
             //put n in ONE
-            Vector3 pos = new Vector3(-4.67f, -1.18f, 0);
-            Instantiate(nPrefab, pos, Quaternion.identity);
+            Vector3 pos = new Vector3(-5.88f, -1.14f, 0);
+            Instantiate(oPrefab, pos, Quaternion.identity);
         }
         else
         {
             //put n in Button
             //destroy n
-            Vector3 pos = new Vector3(5.69f, -1.18f, 0);
-            Instantiate(nPrefab, pos, Quaternion.identity);
-            
+            Vector3 pos = new Vector3(4.48f, -1.09f, 0);
+            Instantiate(oPrefab, pos, Quaternion.identity);
+
             Destroy(gameObject);
         }
     }
