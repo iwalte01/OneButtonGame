@@ -23,7 +23,7 @@ public class Box : MonoBehaviour
 
     public void Explode() {
         Debug.Log("Hit");
-        Instantiate(letterPrefab, gameObject.transform.position, Quaternion.identity);
+        Instantiate(letterPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

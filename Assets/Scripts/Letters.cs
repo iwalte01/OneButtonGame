@@ -15,6 +15,7 @@ public class Letters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initpos = transform.position;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         rb = GetComponent<Rigidbody2D>();
@@ -45,12 +46,6 @@ public class Letters : MonoBehaviour
             gameObject.transform.position = initpos;
 
         }
-        //if (collision.collider.gameObject.CompareTag("Cart"))
-        //{
-        //   Debug.Log("Cart Hit");
-
-        //}
-
 
     }
 
