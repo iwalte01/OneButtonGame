@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hub Door.unity
     guid: 04e032986b1744f0387f3591cd9888ec
   - enabled: 1
+    path: Assets/Scenes/OpenHub.unity
+    guid: f732edb46c57c4566a39816c82f3317b
+  - enabled: 1
     path: Assets/Scenes/Endgame.unity
     guid: 2281c64aaf2201f46ade96e628689e6e
   m_configObjects: {}
