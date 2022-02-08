@@ -11,13 +11,13 @@ public class HubDoor : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+       // myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/Scenes");
     }
 
     void OnMouseDown()
     {
         Debug.Log("ABOUT TO CHANGE SCENES");
-        //SceneManager.LoadScene("HubDoor");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     // Update is called once per frame
     void Update()
