@@ -12,7 +12,12 @@ GameObject:
   - component: {fileID: 3599115713820485932}
   - component: {fileID: -1289143792829642813}
   - component: {fileID: 7848890905296107825}
+<<<<<<< Updated upstream
   - component: {fileID: -5026200606363888349}
+=======
+  - component: {fileID: -618084127078632422}
+  - component: {fileID: 2819659260512862447}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: letter_T
   m_TagString: T
@@ -118,7 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9441c1d2ef2c742a8ad4bc53b663dce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!61 &-5026200606363888349
+=======
+--- !u!61 &-618084127078632422
+>>>>>>> Stashed changes
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,3 +153,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6439095, y: 3.4695652}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &2819659260512862447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268949411961863250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb140d212f4b4d448aebe8ee9786e8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tPrefab: {fileID: 2268949411961863250}
+>>>>>>> Stashed changes
