@@ -40,7 +40,7 @@ public class Letters : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.CompareTag("Floor")) {
+        if (collision.collider.gameObject.tag == "Floor") {
             Debug.Log("Floor Hit");
             gameObject.transform.position = initpos;
 
