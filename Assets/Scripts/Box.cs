@@ -27,4 +27,12 @@ public class Box : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnMouseDown()
+    {
+        // this object was clicked - do something
+        Debug.Log("hit the box");
+        Explode();
+        Destroy(this.gameObject);
+    }
+
 }
