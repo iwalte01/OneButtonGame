@@ -62,6 +62,7 @@ public class Player1 : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("hit cart");
         int letterCount = 0;
 
         if(collision.collider.gameObject.tag == "N")
@@ -88,6 +89,7 @@ public class Player1 : MonoBehaviour
         {
             Debug.Log("Level Complete go to next stage");
         }
+        Destroy(collision.gameObject);
     }
 
     //Vector3 GetMouseWorldPosition()
