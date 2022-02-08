@@ -335,7 +335,6 @@ MonoBehaviour:
   cartE: {fileID: 2091829175261615561, guid: ad1692a0ce731473baeec26e6b6596f3, type: 3}
   cartT: {fileID: 756911166660455246, guid: ad1692a0ce731473baeec26e6b6596f3, type: 3}
   cartO: {fileID: -1771866121167276815, guid: ad1692a0ce731473baeec26e6b6596f3, type: 3}
-  crosshair: {fileID: 7889505132624627665, guid: 554a3c214a5af4c4e85b6418b45f116f, type: 3}
 --- !u!60 &15012731
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1341,8 +1340,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57639418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6947374, y: 0.77242863, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.63, y: 0.74, z: -1.848258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1810,6 +1809,7 @@ GameObject:
   - component: {fileID: 1277484234}
   - component: {fileID: 1277484233}
   - component: {fileID: 1277484236}
+  - component: {fileID: 1277484237}
   m_Layer: 0
   m_Name: box-1
   m_TagString: Box
@@ -1916,6 +1916,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterPrefab: {fileID: 4075309271170143844, guid: 3a7748661eb80487daf72423e58b5dd3, type: 3}
+--- !u!61 &1277484237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277484232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.72, y: 1.42}
+    newSize: {x: 0.72, y: 1.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.72, y: 1.42}
+  m_EdgeRadius: 0
 --- !u!1 &1335908419
 GameObject:
   m_ObjectHideFlags: 0
