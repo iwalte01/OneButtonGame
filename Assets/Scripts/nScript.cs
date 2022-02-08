@@ -21,13 +21,21 @@ public class nScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Mouse was clicked");
         counter++;
         if(counter == 1)
         {
             //put n in ONE
-            Vector3 pos = new Vector3(0, 0, 0);
+            Vector3 pos = new Vector3(-4.67f, -1.18f, 0);
             Instantiate(nPrefab, pos, Quaternion.identity);
+        }
+        else
+        {
+            //put n in Button
+            //destroy n
+            Vector3 pos = new Vector3(5.69f, -1.18f, 0);
+            Instantiate(nPrefab, pos, Quaternion.identity);
+
+            Destroy(gameObject);
         }
     }
 }
