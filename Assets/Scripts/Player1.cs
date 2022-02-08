@@ -13,6 +13,7 @@ public class Player1 : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer mySpriteRenderer;
+    int letterCount = 0;
     //public GameObject crosshair;
 
 
@@ -38,32 +39,15 @@ public class Player1 : MonoBehaviour
             mySpriteRenderer.flipX = true;
         }
 
-        //Vector3 mouseWorldPos = GetMouseWorldPosition();
-        //UpdateCrosshair(mouseWorldPos);
-
-        //Vector2 origin = transform.position;
-        //Vector2 target = crosshair.transform.position;
-        //Vector2 direction = target - origin;
-        //RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
-
-
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (hit.collider != null && hit.collider.gameObject.CompareTag("Box"))
-        //    {
-        //        Debug.Log("hit the box");
-        //        hit.collider.GetComponent<Box>().Explode();
-                
-        //        //letter fall
-        //        //hit.collider.gameObject.GetComponent<Letter>().LetterFall();
-        //    }
-        //}
+        if (letterCount >= 5)
+        {
+            Debug.Log("Level Complete go to next stage");
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("hit cart");
-        int letterCount = 0;
 
         if(collision.collider.gameObject.tag == "N")
         {
@@ -85,25 +69,6 @@ public class Player1 : MonoBehaviour
             letterCount++;
             mySpriteRenderer.sprite = cartO;
         }
-        if(letterCount >= 5)
-        {
-            Debug.Log("Level Complete go to next stage");
-        }
         Destroy(collision.gameObject);
     }
-
-    //Vector3 GetMouseWorldPosition()
-    //{
-    //    // this gets the current mouse position (in screen coordinates) and transforms it into world coordinates
-    //    Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    // the camera is on z = -10, so all screen coordinates are on z = -10. To be on the same plane as the game, we need to set z to 0
-    //    mouseWorldPos.z = 0;
-
-    //    return mouseWorldPos;
-    //}
-
-    //void UpdateCrosshair(Vector3 newCrosshairPosition)
-    //{
-    //    crosshair.transform.position = newCrosshairPosition;
-    //}
 }
